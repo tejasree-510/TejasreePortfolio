@@ -1,0 +1,213 @@
+/* === Reset & Body Styles === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff; /* White background throughout */
+  color: #333;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #333 !important;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Remove blue for active state */
+.nav-link.active {
+  color: #333 !important;
+}
+
+/* Change hover color only */
+.nav-link:hover {
+  color: #6366f1 !important;
+}
+
+/* Underline on hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #6366f1;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* === Buttons === */
+.btn-outline-primary {
+  border-color: #6366f1;
+  color: #6366f1;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+/* === Hero Section === */
+.hero-section {
+  background-color: #ffffff;
+  padding: 100px 0;
+}
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* === Projects Section === */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.overlay {
+  padding: 15px;
+}
+.overlay-title {
+  color: #6366f1;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.overlay-stack {
+  color: #555;
+  font-size: 0.9rem;
+}
+/* Bold college names in Education section */
+/* Education Section */
+#education {
+  background-color: #ffffff;
+}
+#education .section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+#education .education-entry h5 {
+  font-size: 1.25rem;
+  margin-bottom: .25rem;
+}
+#education .education-entry p {
+  margin: 0;
+  padding: 0;
+  color: #555;
+}
+
+/* Responsive container flex */
+@media (min-width: 768px) {
+  #education .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #education .education-text {
+    flex: 0 0 60%;
+  }
+  #education .education-image {
+    flex: 0 0 35%;
+  }
+}
+
+/* === Skills & Education Sections === */
+#skills ul,
+#education ul {
+  padding-left: 1.2rem;
+}
+#contact {
+  background-color: #ffffff;
+}
+
+#contact img {
+  margin-top: 1rem;
+}
+
+/* === Footer Layout === */
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Left, center, right */
+  padding: 20px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+/* Left: Name */
+.footer-name {
+  flex: 1;
+  text-align: left;
+  color: orangered;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Center: Icons */
+.footer-icons {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-icon {
+  margin: 0 8px;
+}
+
+.footer-icon img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+.footer-icon img:hover {
+  transform: scale(1.2);
+}
+
+/* Right: Copyright */
+.footer-copy {
+  flex: 1;
+  text-align: right;
+  color: #121111;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* === Responsive Footer === */
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-name,
+  .footer-icons,
+  .footer-copy p {
+  color: orangered;      /* Highlight color */
+  font-weight: bold;
+}
+}
